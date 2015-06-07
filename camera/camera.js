@@ -2,7 +2,7 @@
 
 // Imports
 var angular = require('angular');
-var HomeCtrl  = require('./controllers/homeCtrl');
+var CameraCtrl  = require('./controllers/cameraCtrl');
 
 // Camera sub-module definition
 var camera = angular.module('app.camera', []);
