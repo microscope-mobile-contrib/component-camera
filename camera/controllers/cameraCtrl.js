@@ -14,6 +14,7 @@ function CameraCtrl ($cordovaCamera) {
  * @return {[type]}
  */
 CameraCtrl.prototype.take = function () {
+	var self = this;
     var options = {
       quality: 50,
       destinationType: Camera.DestinationType.DATA_URL,
@@ -27,7 +28,7 @@ CameraCtrl.prototype.take = function () {
     };
 
 	_$cordovaCamera.getPicture(options).then(function(imageData) {
-  		this.image = "data:image/jpeg;base64," + imageData;
+  		self.image = "data:image/jpeg;base64," + imageData;
 	}, function(err) {
   		// error
 	});
