@@ -1,8 +1,18 @@
 <ion-view title="Camera">
-	<ion-content class="padding">
-		<button type="button" class="button button-block" ng-submit="false" ng-click="vm.take()">
-			  <i class="icon ion-ios7-camera"></i> Take a picture
-		</button>
-		<img ng-src="{{vm.image}}">
-	</ion-content>
+  <ion-content class="padding">
+    <button type="button" class="button button-block" ng-submit="false" ng-click="vm.take()">
+      <i class="icon ion-ios7-camera"></i>Take a picture</button>
+   
+    <div class="list card" ng-if="vm.image">
+      <div class="item item-avatar">
+        <img src="{{vm.image}}">
+        <h2>Photo</h2>
+        <p>cordova plugin camera</p>
+      </div>
+      <div class="item item-image">
+          <img ng-src="{{vm.image}}">
+      </div>
+    </div>
+
+  </ion-content>
 </ion-view>
