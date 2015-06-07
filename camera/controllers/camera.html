@@ -1,0 +1,9 @@
+<ion-view title="Camera">
+	<ion-content class="padding">
+		<button type="button" class="button button-block" ng-submit="false" ng-click="take()">
+			  <i class="icon ion-ios7-camera"></i> Take a picture
+			</button>
+
+			<img ng-src="data:image/jpeg;base64,{{image}}" ng-if="image">
+	</ion-content>
+</ion-view>
